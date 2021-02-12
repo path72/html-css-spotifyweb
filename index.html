@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- *** FONTS *** -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <!-- *** FONT AWESOME *** -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <!-- *** REMOTE BOOTSTRAP CSS *** -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <!-- *** LOCAL BOOTSTRAP CSS **** (@grid-float-breakpoint: @screen-md-min) -->
@@ -19,43 +19,48 @@
   </head>
   <body>
 
-    <!------------------------------------------
-
-
-    ------------------------------------------->
-
       <div class="wrapper">
         <main>
           <section class="main_nav">
+            <!-- /* NAV LOGO */ -->
             <section class="nav_logo">
-              <img src="img/logo.svg" alt="">
+              <a href="#"><img src="img/logo.svg" alt=""></a>
             </section>
+            <!-- /* NAV MENU */ -->
             <section class="nav_menu">
               <ul>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
+                <li><a href="#"><img src="img/home.svg" alt=""><span>Home</spa></a></li>
+                <li><a href="#"><img src="img/search.svg" alt=""><span>Cerca</spa></a></li>
+                <li><a href="#"><img src="img/libreria.svg" alt=""><span>La tua libreria</spa></a></li>
               </ul>
             </section>
+            <!-- /* NAV PLAYLIST HEAD */ -->
+            <section class="nav_playlist_head">
+              <ul>
+                <li class="ms_tx_white ms_txt_1">PLAYLIST</li>
+                <li><a href="#" class="ms_txt_1"><i class="fas fa-plus"></i> Crea Playlist</a></li>
+              </ul>
+            </section>
+            <!-- /* NAV PLAYLIST */ -->            
             <section class="nav_playlist">
               <ul>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 1</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
               </ul>
             </section>
+            <!-- /* NAV USER */ -->
             <section class="nav_user">
-              <div class="app-install">app-install</div>
-              <div class="user-profile">user-profile</div>
+              <a class="app-install" href="#"><img src="img/download.svg" alt=""> Installa app</a>
+              <a class="user-profile ms_tx_white ms_txt_1" href="#"><img src="img/profile.svg" alt=""> John Doe</a>
             </section>
-          </section>
+          </section> <!-- main_nav -->
+
+
           <section class="main_content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ad, maxime labore, adipisci vel sapiente aliquam rerum voluptates molestiae nostrum ex omnis! Nihil expedita a perspiciatis, voluptatem veniam optio culpa?
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ad, maxime labore, adipisci vel sapiente aliquam rerum voluptates molestiae nostrum ex omnis! Nihil expedita a perspiciatis, voluptatem veniam optio culpa?
