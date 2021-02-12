@@ -24,26 +24,29 @@
           <section class="main_nav">
             <!-- /* NAV LOGO */ -->
             <section class="nav_logo">
-              <a href="#"><img src="img/logo.svg" alt=""></a>
+              <a href="#">
+                <img class="xs_hidden" src="img/logo.svg" alt="">
+                <img class="xs_visible" src="img/logo-small.svg" alt="">
+              </a>
             </section>
             <!-- /* NAV MENU */ -->
             <section class="nav_menu">
               <ul>
-                <li><a href="#"><img src="img/home.svg" alt=""><span>Home</spa></a></li>
-                <li><a href="#"><img src="img/search.svg" alt=""><span>Cerca</spa></a></li>
-                <li><a href="#"><img src="img/libreria.svg" alt=""><span>La tua libreria</spa></a></li>
+                <li><a href="#"><img src="img/home.svg" alt=""><span class="xs_hidden">Home</spa></a></li>
+                <li><a href="#"><img src="img/search.svg" alt=""><span class="xs_hidden">Cerca</spa></a></li>
+                <li><a href="#"><img src="img/libreria.svg" alt=""><span class="xs_hidden">La tua libreria</spa></a></li>
               </ul>
             </section>
             <!-- /* NAV PLAYLIST HEAD */ -->
-            <section class="nav_playlist_head">
+            <section class="nav_playlist_head xs_hidden">
               <ul>
                 <li class="ms_tx_white ms_txt_1">PLAYLIST</li>
                 <li><a href="#" class="ms_txt_1"><i class="fas fa-plus"></i> Crea Playlist</a></li>
               </ul>
             </section>
-            <!-- /* NAV PLAYLIST */ -->            
+            <!-- /* NAV PLAYLIST */ -->
             <section class="nav_playlist">
-              <ul>
+              <ul class="xs_hidden">
                 <li><a href="#">Nome Playlist</a></li>
                 <li><a href="#">Nome Playlist</a></li>
                 <li><a href="#">Nome Playlist</a></li>
@@ -55,8 +58,8 @@
             </section>
             <!-- /* NAV USER */ -->
             <section class="nav_user">
-              <a class="app-install" href="#"><img src="img/download.svg" alt=""> Installa app</a>
-              <a class="user-profile ms_tx_white ms_txt_1" href="#"><img src="img/profile.svg" alt=""> John Doe</a>
+              <a class="app-install" href="#"><img src="img/download.svg" alt=""><span class="xs_hidden"> Installa app</span></a>
+              <a class="user-profile ms_tx_white ms_txt_1" href="#"><img src="img/profile.svg" alt=""><span class="xs_hidden"> John Doe</span></a>
             </section>
           </section> <!-- main_nav -->
 

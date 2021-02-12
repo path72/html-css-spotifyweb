@@ -8,7 +8,6 @@
 }
 body {
   background-color: cyan;
-  color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -95,6 +94,16 @@ footer {
 .main_nav .nav_logo img {
   height: 80px;
   padding: 20px;
+  /* transition: filter 0.2s; */
+}
+.main_nav .nav_logo img:hover {
+  /* filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 5px #adff2f) drop-shadow(0 0 10px #adff2f); */
+  animation: shining 0.2s ease-in-out 1 alternate;
+}
+@keyframes shining {
+  0%   { filter: none; }
+  20%  { filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 5px #adff2f) drop-shadow(0 0 10px #adff2f); }
+  100% { filter: none; }
 }
 /* NAV MENU */
 .main_nav .nav_menu ul li {
@@ -147,16 +156,9 @@ footer {
 .main_nav .nav_playlist ul li {
   padding: 5px 0 13px 20px;  
 }
-/* NAV HOVER */
-.main_nav ul li:hover a {
-  color: white;
-} 
-.main_nav ul li:hover .fas {
-  background-color: white;
-} 
 /* NAV USER */
 .main_nav .nav_user {
-  padding: 10px 0 0 20px;
+  padding: 10px 20px 0 20px;
 }
 .main_nav .nav_user a {
   display: flex;
@@ -177,13 +179,43 @@ footer {
 .main_nav .nav_user .user-profile img {
   height: 25px;
   width: 25px;
-  margin: 12px 10px 10px 0;
+  margin: 12px 10px 8px 0;
   border-radius: 50%;
   background-color: #a3a3a3;
 }
+/* NAV HOVER */
+.main_nav ul li:hover a,
 .main_nav .nav_user:hover a {
   color: white;
+} 
+.main_nav ul li:hover .fas {
+  background-color: white;
+} 
+
+
+/* appunti di collasso */
+.xs_visible {
+  display: none;
 }
+/* .xs_hidden {
+  display: none;
+}
+.xs_visible {
+  display: block;
+}
+.main_nav {
+  width: 65px;
+}
+.main_nav .nav_logo img {
+  height: 65px;
+}
+.main_content {
+  width: calc(100% - 65px);
+  margin-left: 65px;
+}
+.main_nav .nav_user .app-install img {
+  margin: 0 auto;
+} */
 
 /****************************************************************
 **  FOOTER
