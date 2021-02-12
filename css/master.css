@@ -24,14 +24,14 @@ body {
 */
 main {
   width: 100%;
-  height: calc(100% - 90px);
+  height: calc(100% - 150px);
 }
 .main_nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 300px;
-  height: calc(100% - 90px);
+  height: calc(100% - 150px);
   background-color: black;
 }
 .main_content {
@@ -45,16 +45,16 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 90px;
+  height: 150px;
   width: 100%;
-  background-color: pink;
+  background-color: black;
 }
 
 /****************************************************************
 **  MACRO-STRUTURA - SISTEMA FLOAT
 */
 /* main {
-  height: calc(100% - 90px);
+  height: calc(100% - 150px);
 }
 .main_nav {
   float: left;
@@ -70,7 +70,7 @@ footer {
   background-color: yellow;
 }
 footer {
-  height: 90px;
+  height: 150px;
   background-color: pink;
 } */
 
@@ -80,22 +80,85 @@ footer {
 .main_nav {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 15px 15px 0;
 }
-.main_nav .nav_element {
+.main_nav [class*="nav_"] {
   width: 100%;
-  margin-bottom: 5px;
+  padding: 5px;
   background-color: pink;
+  border: 1px solid red;
 }
-.main_nav .nav_element.nav_playlist {
+.main_nav .nav_menu {
+
+}
+.main_nav .nav_playlist {
   flex-grow: 1;
   min-height: 90px;
   overflow-y: auto;
 }
-.main_nav .nav_element.nav_user {
-  /* width: 100px; */
+.main_nav .nav_user {
   background-color: #0063FF;
 }
+
+/****************************************************************
+**  FOOTER
+*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+footer [class*="footer_"] {
+  height: 100%;
+  width: 200px;
+  background-color: pink;
+  border: 1px solid red;
+}
+footer .footer_left {
+  flex-basis: auto;
+  /* min-width: 80px; */
+}
+footer .footer_middle {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+}
+footer .footer_right {
+  flex-basis: auto;
+  /* min-width: 80px; */
+}
+footer .footer_middle div {
+  background-color: black;
+}
+footer .footer_middle .console {
+} 
+footer .footer_middle .seekbar {
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /****************************************************************
 **  TEXTS
