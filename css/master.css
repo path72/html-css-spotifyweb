@@ -301,12 +301,13 @@ footer .footer_right {
   justify-content: space-between;
   width: 100%;
   max-width: 230px;
+  padding-right: 10px;
   /* border: 1px solid red; */
 }
 footer .footer_right .fas {
   font-size: 1.1em;
   font-weight: 600;
-  padding: 5px;
+  padding: 6px;
   border-radius: 50%;
   color: #eaeaea;
   /* border: 1px solid red; */
@@ -316,11 +317,8 @@ footer .footer_right .fas:hover {
   background-color: #eaeaea;
 }
 footer .footer_right .seekbar_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 120px;
+  flex-grow: 1;
+  max-width: 100px;
   /* border: 1px solid red; */
 }
 /*** SEEKBAR ***/
