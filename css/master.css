@@ -7,12 +7,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: cyan;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #606060;
   /* min-width: 297px;  */
+  background-color: cyan;
 }
 .wrapper {
   width: 100%;
@@ -48,7 +48,7 @@ main {
   height: 100%;
   margin-left: 230px;
   overflow-y: auto;
-  background-color: #808080;
+  background-color: #141922;
 }
 footer {
   position: fixed;
@@ -194,6 +194,49 @@ footer {
 .main_nav ul li:hover .fas {
   background-color: #eaeaea;
 }
+
+/****************************************************************
+**  MAIN CONTENT
+*/
+.main_content {
+  padding: 20px;
+}
+.main_content .central_nav {
+  margin-top: 70px;
+  height: 50px;
+  border: 1px solid red;
+}
+.main_content .row1 {
+  border: 1px solid green;
+}
+.main_content .row1 .ms_box {
+  height: 200px;
+  border: 1px solid red;
+}
+
+.main_content .row2 {
+
+}
+.main_content .row3 {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /****************************************************************
 **  FOOTER
@@ -347,7 +390,7 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
   /* font-weight: 600; */
 }
 .ms_txt_title {
-  /* font-size: 1.5em; */
+  font-size: 1.5em;
   /* font-weight: 700; */
 }
 .ms_txt_subtitle {
