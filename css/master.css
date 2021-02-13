@@ -148,7 +148,7 @@ footer {
 }
 /* NAV PLAYLIST */
 .main_nav .nav_playlist {
-  flex-grow: 1;
+  flex-grow: 1; /*** IL TRUCCO È QUA!! ***/
   min-height: 90px;
   overflow-y: auto;
   margin-top: 15px;
@@ -224,20 +224,11 @@ footer {
 footer {
   display: flex;
   justify-content: space-between;
-  /* padding: 15px; */
 }
-footer [class*="footer_"] {
-  height: 100%;
-  width: 200px;
-  /* background-color: pink; */
-  /* border: 1px solid red; */
-}
-/* FOOTER LEFT */
+/*** FOOTER LEFT ***/
 footer .footer_left {
-  /* flex-basis: auto; */
   display: flex;
   align-items: center;
-  /* flex-shrink: 1; */
   width: 230px;
 }
 footer .footer_left .cover img {
@@ -254,52 +245,97 @@ footer .footer_left .far {
   font-size: 1.15em;
   margin: 0 8px;
 }
-/* FOOTER MIDDLE */
+footer .footer_left .far:hover {
+  color: #eaeaea;
+}
+/*** FOOTER MIDDLE ***/
 footer .footer_middle {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-width: 140px; */
+  flex-grow: 1; /*** IL TRUCCO È QUA!! ***/
+  padding: 0 10px;
+  /* border: 1px solid red; */
 }
-footer .footer_right {
-  /* flex-basis: auto; */
-  /* min-width: 80px; */
-}
-footer .footer_middle div {
-  background-color: black;
-}
+/* console */
 footer .footer_middle .console {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px; /*! altezza massima del pulsante play !*/
+  width: 100%;
+  max-width: 200px;
+  /* border: 1px solid red; */
 }
-footer .footer_middle .seekbar {
+footer .footer_middle .console a {
+  color: #eaeaea;
 }
-/* FOOTER RIGHT */
+footer .footer_middle .console .fas {
+  font-size: 1.2em;
+  padding: 5px;
+  /* border: 1px solid red; */
+}
+footer .footer_middle .console .far {
+  font-size: 30px;
+  margin: 0 2px; /*! compensazione play in hover !*/
+}
+footer .footer_middle .console .far:hover {
+  font-size: 34px;
+  margin: 0 0; /*! compensazione play in hover !*/
+}
+/* seekbar container */
+footer .footer_middle .seekbar_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+  /* border: 1px solid red; */
+}
+/*** FOOTER RIGHT ***/
 footer .footer_right {
   display: flex;
   align-items: center;
-  /* flex-shrink: 1; */
-  width: 230px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 230px;
+  /* border: 1px solid red; */
 }
 footer .footer_right .fas {
   font-size: 1.1em;
   font-weight: 600;
-  padding: 8px;
+  padding: 5px;
   border-radius: 50%;
   color: #eaeaea;
+  /* border: 1px solid red; */
 }
-footer .footer_right .seekbar {
+footer .footer_right .fas:hover {
+  color: #282828;
+  background-color: #eaeaea;
+}
+footer .footer_right .seekbar_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 120px;
+  /* border: 1px solid red; */
+}
+/*** SEEKBAR ***/
+footer .seekbar {
   width: 100%;
   padding: 10px;
   /* border: 1px solid red; */
 }
-footer .footer_right .seekbar .seekbar_content {
+footer .seekbar .seekbar_content {
   position: relative;
   height: 4px;
   border-radius: 2px;
   background-color: #606060;
 }
-footer .footer_right .seekbar .seekbar_content .seekbar_progress {
+footer .seekbar .seekbar_content .seekbar_progress {
   position: absolute;
   top: 0;
   left: 0;
@@ -309,10 +345,10 @@ footer .footer_right .seekbar .seekbar_content .seekbar_progress {
   border-radius: 2px;
   background-color: #eaeaea;
 }
-footer .footer_right .seekbar:hover .seekbar_content .seekbar_progress {
+footer .seekbar:hover .seekbar_content .seekbar_progress {
   background-color: #adff2f;
 }
-footer .footer_right .seekbar .seekbar_content .seekbar_progress:after {
+footer .seekbar .seekbar_content .seekbar_progress:after {
   content: "";
   display: none;
   position: absolute;
@@ -324,32 +360,9 @@ footer .footer_right .seekbar .seekbar_content .seekbar_progress:after {
   height: 14px;
   border-radius: 50%;
 }
-footer .footer_right .seekbar:hover .seekbar_content .seekbar_progress:after {
+footer .seekbar:hover .seekbar_content .seekbar_progress:after {
   display: block;
 }
-/* FOOTER HOVER  */
-footer .footer_left .far:hover {
-  color: #eaeaea;
-}
-footer .footer_right .fas:hover {
-  color: #282828;
-  background-color: #eaeaea;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /****************************************************************
 **  TEXTS
