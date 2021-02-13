@@ -33,14 +33,14 @@ a {
 */
 main {
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 90px);
 }
 .main_nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 230px;
-  height: calc(100% - 100px);
+  height: calc(100% - 90px);
   background-color: black;
 }
 .main_content {
@@ -54,7 +54,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 100px;
+  height: 90px;
   width: 100%;
   background-color: #282828;
 }
@@ -84,13 +84,13 @@ footer {
 } */
 
 /****************************************************************
-**  STRUTTURA NAVBAR - SISTEMA FIXED
+**  NAVBAR - SISTEMA FIXED
 */
 .main_nav {
   display: flex;
   flex-direction: column;
 }
-/* NAV LOGO */
+/*** NAV LOGO ***/
 .main_nav .nav_logo img {
   height: 80px;
   padding: 20px;
@@ -105,7 +105,10 @@ footer {
   20%  { filter: drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 5px #adff2f) drop-shadow(0 0 10px #adff2f); }
   100% { filter: none; }
 }
-/* NAV MENU */
+.main_nav .nav_logo .logo_small {
+  display: none;
+}
+/*** NAV MENU ***/
 .main_nav .nav_menu ul li {
   padding: 5px 0 5px 20px;
 }
@@ -128,11 +131,11 @@ footer {
 .main_nav .nav_menu ul li:hover img {
   opacity: 1;
 }
-/* NAV PLAYLIST HEAD */
+/*** NAV PLAYLIST HEAD ***/
 .main_nav .nav_playlist_head ul li:first-child {
   padding: 18px 0 10px 20px;
 }
-.main_nav .nav_playlist_head ul li:nth-child(2) {
+.main_nav .nav_playlist_head ul li:last-child {
   padding: 0 0 0 20px;
 }
 .main_nav .nav_playlist_head ul li .fas {
@@ -146,7 +149,7 @@ footer {
   margin-right: 8px;
   background-color: #a3a3a3;
 }
-/* NAV PLAYLIST */
+/*** NAV PLAYLIST ***/
 .main_nav .nav_playlist {
   flex-grow: 1; /*** IL TRUCCO È QUA!! ***/
   min-height: 90px;
@@ -156,7 +159,7 @@ footer {
 .main_nav .nav_playlist ul li {
   padding: 5px 0 13px 20px;
 }
-/* NAV USER */
+/*** NAV USER ***/
 .main_nav .nav_user {
   padding: 10px 20px 0 20px;
 }
@@ -183,7 +186,7 @@ footer {
   border-radius: 50%;
   background-color: #a3a3a3;
 }
-/* NAV HOVER */
+/*** NAV HOVER ***/
 .main_nav ul li:hover a,
 .main_nav .nav_user:hover a {
   color: #eaeaea;
@@ -191,32 +194,6 @@ footer {
 .main_nav ul li:hover .fas {
   background-color: #eaeaea;
 }
-
-
-
-/* appunti di collasso xs */
-.xs_visible {
-  display: none;
-}
-/* .xs_hidden {
-  display: none;
-}
-.xs_visible {
-  display: block;
-}
-.main_nav {
-  width: 65px;
-}
-.main_nav .nav_logo img {
-  height: 65px;
-}
-.main_content {
-  width: calc(100% - 65px);
-  margin-left: 65px;
-}
-.main_nav .nav_user .app-install img {
-  margin: 0 auto;
-} */
 
 /****************************************************************
 **  FOOTER
@@ -443,6 +420,30 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
 /****************************************************************
 **  MEDIA QUERIES
 */
+
+/*** NAVBAR COLLAPSE <= 768px ***/
+@media screen and (max-width: 768px) {
+  .main_nav {
+    width: 65px;
+  }
+  .main_content {
+    width: calc(100% - 65px);
+    margin-left: 65px;
+  }
+  .main_nav .nav_logo .logo_small {
+    display: block;
+  }  
+  .main_nav .nav_logo img {
+    height: 65px;
+  }
+  .main_nav .nav_logo .logo, 
+  .xs_hidden {
+    display: none;
+  }
+  .main_nav .nav_user .app-install img {
+    margin: 0 auto;
+  }  
+}
 
 /* ________________________________________ XS >= 0 */
 /* default - SEE ABOVE */
