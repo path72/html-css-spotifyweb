@@ -110,7 +110,7 @@ footer {
 }
 /*** NAV MENU ***/
 .main_nav .nav_menu ul li {
-  padding: 5px 0 5px 20px;
+  padding: 7px 0 3px 20px;
 }
 .main_nav .nav_menu ul li a {
   display: flex;
@@ -133,7 +133,7 @@ footer {
 }
 /*** NAV PLAYLIST HEAD ***/
 .main_nav .nav_playlist_head ul li:first-child {
-  padding: 18px 0 10px 20px;
+  padding: 12px 0 10px 20px;
 }
 .main_nav .nav_playlist_head ul li:last-child {
   padding: 0 0 0 20px;
@@ -154,10 +154,10 @@ footer {
   flex-grow: 1; /*** IL TRUCCO È QUA!! ***/
   min-height: 90px;
   overflow-y: auto;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .main_nav .nav_playlist ul li {
-  padding: 5px 0 13px 20px;
+  padding: 5px 0 12px 20px;
 }
 /*** NAV USER ***/
 .main_nav .nav_user {
@@ -199,18 +199,26 @@ footer {
 **  MAIN CONTENT
 */
 .main_content {
-  padding: 20px;
+  /* padding: 20px 0; */
 }
 .main_content .central_nav {
-  margin-top: 70px;
+  margin-top: 90px;
   height: 50px;
   border: 1px solid red;
 }
-.main_content .row1 {
+.main_content .central_row {
   border: 1px solid green;
 }
-.main_content .row1 .ms_box {
-  height: 200px;
+.main_content .central_row .row_title {
+  padding: 20px 0 5px 20px;
+}
+.main_content .central_row .row_subtitle {
+  color: #606060;
+  padding: 2px 0 5px 20px;
+}
+.main_content .central_row .ms_box {
+  margin: 20px 0 5px 0;
+  height: 280px;
   border: 1px solid red;
 }
 
@@ -390,15 +398,15 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
   /* font-weight: 600; */
 }
 .ms_txt_title {
-  font-size: 1.5em;
+  font-size: 1.9em;
   /* font-weight: 700; */
 }
 .ms_txt_subtitle {
-  /* font-size: 1.1em; */
+  font-size: 0.9em;
   /* font-weight: 500; */
 }
 .ms_txt_1 {
-  font-size: 1.15em;
+  font-size: 1.10em;
   /* font-weight: 700; */
 }
 .ms_txt_2 {
