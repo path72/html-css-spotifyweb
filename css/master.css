@@ -22,7 +22,7 @@ body {
 ul {
   list-style: none;
 }
-a {
+a, a:focus {
   text-decoration: none;
   color: #606060;
 }
@@ -58,6 +58,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 9999;
   height: 90px;
   width: 100%;
   background-color: #282828;
@@ -159,9 +160,9 @@ footer {
 }
 /*** NAV PLAYLIST ***/
 .main_nav .nav_playlist {
-  flex-grow: 1; /*** IL TRUCCO È QUA!! ***/
+  flex-grow: 1;      /*** IL TRUCCO È QUA!!... ***/
   min-height: 90px;
-  overflow-y: auto;
+  overflow-y: auto;  /*** ... E QUA!!          ***/
   margin-top: 5px;
 }
 .main_nav .nav_playlist ul li {
@@ -199,24 +200,71 @@ footer {
 **  MAIN CONTENT
 */
 .main_content {
+  display: flex;
+  flex-direction: column;
   /* padding: 20px 0; */
 }
 .main_content a {
   /* TODO: perché non prende quello generale?? */
   text-decoration: none;
 }
-/* UPGRADE BAR */
+/*** UPGRADE BAR ***/
 .main_content .upgrade_bar {
   position: fixed;
   top: 0;
   left: 230;
-  z-index: 9999;
-  width: 100%;
+  z-index: 999;
+  /*****/
+  display: flex;
+  justify-content: flex-end;
+  /*****/
+  width: calc(100% - 230px);
+  /* width: calc(100vw - 230px - 100vw); */
+  /* width: calc(100vw - (100vw - 100%)); */
+  /* width: calc(100vw - var(--scrollbar-width)); */
   height: 90px;
-  background-color: pink;
-  /* border: 1px solid red; */
+  /*****/
+  margin-right: 50px;
+  background-color: #00000054;
+  border: 1px solid red;
 }
-/* CENTRAL NAV */
+.main_content .upgrade_bar .btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  border: 1px solid red;
+}
+.main_content .upgrade_bar a {
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: 1px solid #eaeaea;
+  color: #eaeaea;
+}
+.main_content .upgrade_bar a:hover {
+  transform: scale(1.04);
+}
+/*** SUB-WRAPPER ***/
+.main_content .sub-wrapper {
+  /* overflow-y: auto;  */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** CENTRAL NAV ***/
 .main_content .central_nav ul {
   display: flex;
   justify-content: center;
@@ -243,9 +291,9 @@ footer {
   border-radius: 2px;
   background-color: #adff2f;
 }
-/* CENTRAL ROW */
+/*** CENTRAL ROW ***/
 .main_content .central_row {
-  border: 1px solid green;
+  border: 1px solid green; 
 }
 .main_content .central_row .row_title {
   padding: 20px 0 5px 20px;
@@ -322,26 +370,25 @@ footer .footer_middle .console {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 34px; /*! altezza massima del pulsante play !*/
   width: 100%;
   max-width: 200px;
+  margin-bottom: 2px;
   /* border: 1px solid red; */
 }
 footer .footer_middle .console a {
   color: #eaeaea;
+  padding: 5px;
 }
 footer .footer_middle .console .fas {
   font-size: 1.2em;
-  padding: 5px;
   /* border: 1px solid red; */
 }
 footer .footer_middle .console .far {
-  font-size: 30px;
-  margin: 0 2px; /*! compensazione play in hover !*/
+  font-size: 2.3em;
+  /* border: 1px solid red; */
 }
 footer .footer_middle .console .far:hover {
-  font-size: 34px;
-  margin: 0 0; /*! compensazione play in hover !*/
+  transform: scale(1.15);
 }
 /* seekbar container */
 footer .footer_middle .seekbar_container {
