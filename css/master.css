@@ -210,22 +210,23 @@ footer {
 }
 /*** UPGRADE BAR ***/
 .main_content .upgrade_bar {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 230;
-  z-index: 999;
+  z-index: 999; */
   /*****/
   display: flex;
   justify-content: flex-end;
   /*****/
-  width: calc(100% - 230px);
+  width: 100%;
+  /* width: calc(100% - 230px); */
   /* width: calc(100vw - 230px - 100vw); */
   /* width: calc(100vw - (100vw - 100%)); */
   /* width: calc(100vw - var(--scrollbar-width)); */
   height: 90px;
   /*****/
   margin-right: 50px;
-  background-color: #00000054;
+  /* background-color: #00000054; */
   border: 1px solid red;
 }
 .main_content .upgrade_bar .btn_container {
@@ -246,7 +247,9 @@ footer {
 }
 /*** SUB-WRAPPER ***/
 .main_content .sub-wrapper {
-  /* overflow-y: auto;  */
+  /* flex-grow: 1;       */
+  /*** IL TRUCCO È QUA!!... ***/
+  overflow-y: auto;  /*** ... E QUA!!          ***/
 }
 
 
@@ -270,7 +273,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 90px;
+  /* margin-top: 90px; */
   margin-bottom: 0px;
   /* border: 1px solid red; */
 }
