@@ -201,11 +201,16 @@ footer {
 .main_content {
   /* padding: 20px 0; */
 }
+/* UPGRADE BAR */
+.main_content .upgrade_bar {
+}
+/* CENTRAL NAV */
 .main_content .central_nav {
   margin-top: 90px;
   height: 50px;
   border: 1px solid red;
 }
+/* CENTRAL ROW */
 .main_content .central_row {
   border: 1px solid green;
 }
@@ -220,13 +225,6 @@ footer {
   margin: 20px 0 5px 0;
   height: 280px;
   border: 1px solid red;
-}
-
-.main_content .row2 {
-
-}
-.main_content .row3 {
-
 }
 
 
