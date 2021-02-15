@@ -319,6 +319,9 @@ footer {
   height: 100%;
   background-color: var(--half_transparent_black);
 }
+.main_content .central_row:last-child .ms_box:hover .ms_box_img::after {
+  border-radius: 50%;
+}
 .main_content .central_row .ms_box .ms_box_img .far {
   display: none;
   z-index: 9999;
