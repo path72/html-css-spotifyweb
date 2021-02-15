@@ -51,7 +51,8 @@ main {
   width: calc(100% - 230px);
   height: 100%;
   margin-left: 230px;
-  overflow-y: auto;
+  /* senza sub-wrapper */
+  /* overflow-y: auto; */
   background-color: #141922;
 }
 footer {
@@ -161,8 +162,8 @@ footer {
 /*** NAV PLAYLIST ***/
 .main_nav .nav_playlist {
   flex-grow: 1;      /*** IL TRUCCO È QUA!!... ***/
-  min-height: 90px;
   overflow-y: auto;  /*** ... E QUA!!          ***/
+  min-height: 90px;
   margin-top: 5px;
 }
 .main_nav .nav_playlist ul li {
@@ -202,7 +203,6 @@ footer {
 .main_content {
   display: flex;
   flex-direction: column;
-  /* padding: 20px 0; */
 }
 .main_content a {
   /* TODO: perché non prende quello generale?? */
@@ -210,6 +210,7 @@ footer {
 }
 /*** UPGRADE BAR ***/
 .main_content .upgrade_bar {
+  /* senza sub-wrapper */
   /* position: fixed;
   top: 0;
   left: 230;
@@ -219,14 +220,11 @@ footer {
   justify-content: flex-end;
   /*****/
   width: 100%;
-  /* width: calc(100% - 230px); */
-  /* width: calc(100vw - 230px - 100vw); */
-  /* width: calc(100vw - (100vw - 100%)); */
-  /* width: calc(100vw - var(--scrollbar-width)); */
+  /* senza sub-wrapper */
+  /* width: calc(100vw - 230px - 10px); */
   height: 90px;
-  /*****/
   margin-right: 50px;
-  /* background-color: #00000054; */
+  background-color: #00000054;
   border: 1px solid red;
 }
 .main_content .upgrade_bar .btn_container {
@@ -247,32 +245,15 @@ footer {
 }
 /*** SUB-WRAPPER ***/
 .main_content .sub-wrapper {
-  /* flex-grow: 1;       */
-  /*** IL TRUCCO È QUA!!... ***/
-  overflow-y: auto;  /*** ... E QUA!!          ***/
+  overflow-y: auto;   /*** IL TRUCCO È QUA!!... ***/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*** CENTRAL NAV ***/
 .main_content .central_nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /* senza sub-wrapper */
   /* margin-top: 90px; */
   margin-bottom: 0px;
   /* border: 1px solid red; */
@@ -559,6 +540,9 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
 
 /*** NAVBAR COLLAPSE <= 600px ***/
 @media screen and (max-width: 600px) {
+  .main_content .upgrade_bar {
+    display: none;
+  }
   .main_nav {
     width: 65px;
   }
@@ -576,9 +560,16 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
   .xs_hidden {
     display: none;
   }
+  .main_nav .nav_user .app-install {
+    border-bottom: none;
+  }
   .main_nav .nav_user .app-install img {
     margin: 0 auto;
-  }  
+  }
+  .main_nav .nav_user .user-profile img {
+    margin-right: 0;
+  }
+
 }
 
 /* ________________________________________ XS >= 0 */
