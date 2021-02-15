@@ -62,7 +62,8 @@ main {
   height: 100%;
   margin-left: 230px;
   /* senza sub-wrapper */
-  /* overflow-y: auto; */
+  overflow-y: auto;
+  /*********************/
   background-color: var(--main_content_darkblue);
 }
 footer {
@@ -226,17 +227,17 @@ footer {
 /*** UPGRADE BAR ***/
 .main_content .upgrade_bar {
   /* senza sub-wrapper */
-  /* position: fixed;
+  position: fixed;
   top: 0;
   left: 230;
-  z-index: 999; */
-  /*****/
+  z-index: 999;
+  /*********************/
   display: flex;
   justify-content: flex-end;
-  /*****/
   width: 100%;
   /* senza sub-wrapper */
-  /* width: calc(100vw - 230px - 10px); */
+  width: calc(100vw - 230px - 10px);
+  /*********************/
   height: 90px;
   margin-right: 50px;
   background-color: var(--upgrade_bar_black);
@@ -260,7 +261,8 @@ footer {
 }
 /*** SUB-WRAPPER ***/
 .main_content .sub-wrapper {
-  overflow-y: auto;   /*** IL TRUCCO È QUA!!... ***/
+  /* overflow-y: auto;    */
+  /*** IL TRUCCO È QUA!!... ***/
 }
 /*** CENTRAL NAV ***/
 .main_content .central_nav ul {
@@ -269,7 +271,8 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   /* senza sub-wrapper */
-  /* margin-top: 90px; */
+  margin-top: 90px;
+  /*********************/
   margin-bottom: 0px;
   /* border: 1px solid red; */
 }
@@ -720,7 +723,7 @@ background-color: rgba(0,0,0,0.6);
 /*************************************
   SCHERZO
 */
-
+/* 
 [class*="row"]:nth-child(3n+2) {
 animation: test 4s linear 10s 2 alternate;
 }
@@ -736,4 +739,4 @@ animation: test 4s linear 18s 1 alternate;
 50%  {transform: rotate(360deg);}
 75%  {transform: rotate(750deg);}
 100% {transform: rotate(0deg);}
-}
+} */
