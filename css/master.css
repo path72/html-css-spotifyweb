@@ -62,7 +62,7 @@ main {
   height: 100%;
   margin-left: 230px;
   /* senza sub-wrapper */
-  overflow-y: auto;
+  /* overflow-y: auto; */
   /*********************/
   background-color: var(--main_content_darkblue);
 }
@@ -227,16 +227,16 @@ footer {
 /*** UPGRADE BAR ***/
 .main_content .upgrade_bar {
   /* senza sub-wrapper */
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 230;
-  z-index: 999;
+  z-index: 999; */
   /*********************/
   display: flex;
   justify-content: flex-end;
   width: 100%;
   /* senza sub-wrapper */
-  width: calc(100vw - 230px - 10px);
+  /* width: calc(100vw - 230px - 10px); */
   /*********************/
   height: 90px;
   margin-right: 50px;
@@ -261,7 +261,7 @@ footer {
 }
 /*** SUB-WRAPPER ***/
 .main_content .sub-wrapper {
-  /* overflow-y: auto;    */
+  overflow-y: auto;   
   /*** IL TRUCCO È QUA!!... ***/
 }
 /*** CENTRAL NAV ***/
@@ -271,7 +271,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   /* senza sub-wrapper */
-  margin-top: 90px;
+  /* margin-top: 90px; */
   /*********************/
   margin-bottom: 0px;
   /* border: 1px solid red; */
