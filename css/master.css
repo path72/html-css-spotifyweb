@@ -225,14 +225,14 @@ footer {
   height: 90px;
   margin-right: 50px;
   background-color: #00000054;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .main_content .upgrade_bar .btn_container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 250px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .main_content .upgrade_bar a {
   padding: 10px 40px;
@@ -284,12 +284,20 @@ footer {
 }
 .main_content .central_row .row_subtitle {
   color: #606060;
-  padding: 2px 0 5px 20px;
+  padding: : 2px 0 5px 20px;
 }
 .main_content .central_row .ms_box {
-  margin: 20px 0 5px 0;
-  height: 280px;
+  margin-top: 20px;
+  min-height: 310px;
+  text-align: center;
   border: 1px solid red;
+}
+.main_content .central_row .ms_box img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main_content .central_row .ms_box div+div {
+  margin: 5px 0;
 }
 
 
@@ -476,9 +484,9 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
   /* font-weight: 700; */
 }
 .ms_txt_2 {
-  /* font-size: 1.15em; */
+  font-size: 1.2em;
   /* font-weight: 200; */
-  /* line-height: 1.5em; */
+  line-height: 1.1em;
 }
 .ms_txt_small_1 {
   font-size: 0.8em;
@@ -513,7 +521,7 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
 .ms_tx_white { color: #eaeaea; }
 .ms_tx_blue1 { color: #0063ff; }
 .ms_tx_blue2 { color: #102657; }
-.ms_tx_grey1 { color: #868686; }
+.ms_tx_grey1 { color: #606060; }
 .ms_tx_grey2 { color: #a1a1a1; }
 .ms_tx_grey3 { color: #646464; }
 .ms_tx_acqua { color: #00ccff; }
