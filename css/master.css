@@ -277,7 +277,7 @@ footer {
 }
 /*** CENTRAL ROW ***/
 .main_content .central_row {
-  /* border: 1px solid green;  */
+  border: 1px solid green; 
 }
 .main_content .central_row .row_title {
   padding: 20px 0 5px 15px;
@@ -291,12 +291,36 @@ footer {
   text-align: center;
   border: 1px solid red;
 }
-.main_content .central_row .ms_box img {
-  width: 100%;
+.main_content .central_row .ms_box:hover {
+  cursor: pointer;
+}
+.main_content .central_row .ms_box .ms_box_img {
+  position:relative;
   margin-bottom: 20px;
 }
-.main_content .central_row .ms_box:hover img {
-  
+.main_content .central_row .ms_box:hover .ms_box_img::after {
+  content:"";
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+}
+.main_content .central_row .ms_box .ms_box_img .far {
+  display: none;
+  z-index: 9999;
+  font-size: 4.5em;
+}
+.main_content .central_row .ms_box:hover .ms_box_img::after,
+.main_content .central_row .ms_box .ms_box_img .far {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.main_content .central_row .ms_box:hover .ms_box_img .far {
+  display: block;
+}
+.main_content .central_row .ms_box .ms_box_img img {
+  width: 100%;
 }
 .main_content .central_row .ms_box div+div {
   margin: 5px 0;
@@ -304,24 +328,6 @@ footer {
 .main_content .central_row+.central_row+.central_row img {
   border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /****************************************************************
 **  FOOTER
