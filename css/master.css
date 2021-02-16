@@ -537,7 +537,7 @@ footer .seekbar:hover .seekbar_content .seekbar_progress::after {
 **  MEDIA QUERIES
 */
 
-/*** NAVBAR COLLAPSE <= 600px ***/
+/*** NAVBAR + UPGRADE BAR COLLAPSE - WIDTH <= 600px ***/
 @media screen and (max-width: 600px) {
   .main_content .upgrade_bar {
     display: none;
@@ -567,6 +567,13 @@ footer .seekbar:hover .seekbar_content .seekbar_progress::after {
   }
   .main_nav .nav_user .user-profile img {
     margin-right: 0;
+  }
+}
+
+/*** UPGRADE BAR COLLAPSE - HEIGHT <= 400px ***/
+@media screen and (max-height: 400px) {
+  .main_content .upgrade_bar {
+    display: none;
   }
 }
 
