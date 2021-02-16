@@ -293,9 +293,9 @@ footer {
   background-color: var(--green);
 }
 /*** CENTRAL ROW ***/
-.main_content .central_row {
-  /* border: 1px solid green;  */
-}
+/* .main_content .central_row {
+  border: 1px solid green; 
+} */
 .main_content .central_row .row_title {
   padding: 20px 0 5px 15px;
 }
@@ -357,9 +357,9 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-footer div {
-  /* border: 1px solid red; */
-}
+/* footer div {
+  border: 1px solid red;
+} */
 /*** FOOTER LEFT ***/
 footer .footer_left {
   display: flex;
@@ -587,15 +587,29 @@ footer .seekbar:hover .seekbar_content .seekbar_progress::after {
 }
 /* ______________________________________ MD >= 992 */
 @media screen and (min-width: 992px) {
-  .main_content .central_row .ms_box {
+  /* no bootstrap height issue workaround  */
+  /* .main_content .central_row .ms_box {
     min-height: 310px;
-  }
+  } */
 }
 /* ______________________________________ LG >= 1200 */
 @media screen and (min-width: 1200px) {
-  .main_content .central_row .ms_box {
+  /* no bootstrap height issue workaround  */
+  /* .main_content .central_row .ms_box {
     min-height: 0;
-  }
+  } */
+}
+
+/****************************************************************
+**  BOOTSTRAP HEIGHT ISSUE WORKAROUND
+*/
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
 
 /****************************************************************
