@@ -39,6 +39,7 @@ a, a:focus {
 a:hover,
 ul li:hover,
 ul li:hover a {
+  text-decoration: none;
   color: var(--white);
 }
 
@@ -61,9 +62,9 @@ main {
   width: calc(100% - 230px);
   height: 100%;
   margin-left: 230px;
-  /* senza sub-wrapper */
+  /*___ senza sub-wrapper [ ___*/
   /* overflow-y: auto; */
-  /*********************/
+  /*___ ] _____________________*/
   background-color: var(--main_content_darkblue);
 }
 footer {
@@ -79,7 +80,8 @@ footer {
 /****************************************************************
 **  MACRO-STRUTURA - SISTEMA FLOAT
 */
-/* main {
+/* 
+main {
   height: calc(100% - 100px);
 }
 .main_nav {
@@ -98,7 +100,8 @@ footer {
 footer {
   height: 100px;
   background-color: pink;
-} */
+}
+*/
 
 /****************************************************************
 **  NAVBAR - SISTEMA FIXED
@@ -106,10 +109,6 @@ footer {
 .main_nav {
   display: flex;
   flex-direction: column;
-}
-.main_nav a {
-  /* TODO: perché non prende quello generale?? */
-  text-decoration: none;
 }
 /*** NAV LOGO ***/
 .main_nav .nav_logo img {
@@ -198,7 +197,7 @@ footer {
   margin-right: 10px;
   opacity: 0.5;
 }
-.main_nav .nav_user:hover .app-install img {
+.main_nav .nav_user .app-install:hover img {
   opacity: 1;
 }
 .main_nav .nav_user .user-profile {
@@ -220,24 +219,20 @@ footer {
   flex-direction: column;
   color: var(--white);
 }
-.main_content a {
-  /* TODO: perché non prende quello generale?? */
-  text-decoration: none;
-}
 /*** UPGRADE BAR ***/
 .main_content .upgrade_bar {
-  /* senza sub-wrapper */
+  /*___ senza sub-wrapper [ ___*/
   /* position: fixed;
   top: 0;
   left: 230;
   z-index: 999; */
-  /*********************/
+  /*___ ] _____________________*/
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  /* senza sub-wrapper */
+  /*___ senza sub-wrapper [ ___*/
   /* width: calc(100vw - 230px - 10px); */
-  /*********************/
+  /*___ ] _____________________*/
   height: 90px;
   margin-right: 50px;
   background-color: var(--upgrade_bar_black);
@@ -255,6 +250,7 @@ footer {
   border-radius: 20px;
   border: 1px solid var(--white);
   color: var(--white);
+  transition: all 0.1s linear;
 }
 .main_content .upgrade_bar a:hover {
   transform: scale(1.04);
@@ -270,9 +266,9 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* senza sub-wrapper */
+  /*___ senza sub-wrapper [ ___*/
   /* margin-top: 90px; */
-  /*********************/
+  /*___ ] _____________________*/
   margin-bottom: 0px;
   /* border: 1px solid red; */
 }
@@ -282,7 +278,10 @@ footer {
   padding: 0 15px;
   /* border: 1px solid red; */
 }
-.main_content .central_nav ul li:hover:after {
+.main_content .central_nav ul li:hover {
+  cursor: pointer;
+}
+.main_content .central_nav ul li:hover::after {
   content: "";
   position: absolute;
   bottom: 12px;
@@ -412,6 +411,7 @@ footer .footer_middle .console .fas {
 }
 footer .footer_middle .console .far {
   font-size: 2.3em;
+  transition: all 0.1s linear;
   /* border: 1px solid red; */
 }
 footer .footer_middle .console .far:hover {
@@ -475,7 +475,7 @@ footer .seekbar .seekbar_content .seekbar_progress {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25%; /* equal in .seekbar_progress:after */
+  width: 25%; /* equal in .seekbar_progress::after */
   height: 4px;
   border-radius: 2px;
   background-color: var(--white);
@@ -483,7 +483,7 @@ footer .seekbar .seekbar_content .seekbar_progress {
 footer .seekbar:hover .seekbar_content .seekbar_progress {
   background-color: var(--green);
 }
-footer .seekbar .seekbar_content .seekbar_progress:after {
+footer .seekbar .seekbar_content .seekbar_progress::after {
   content: "";
   display: none;
   position: absolute;
@@ -495,17 +495,17 @@ footer .seekbar .seekbar_content .seekbar_progress:after {
   height: 14px;
   border-radius: 50%;
 }
-footer .seekbar:hover .seekbar_content .seekbar_progress:after {
+footer .seekbar:hover .seekbar_content .seekbar_progress::after {
   display: block;
 }
 
 /****************************************************************
 **  TEXTS
 */
-.ms_txt_payoff {
-  /* font-size: 3em; */
-  /* font-weight: 600; */
-}
+/* .ms_txt_payoff {
+  font-size: 3em;
+  font-weight: 600;
+} */
 .ms_txt_title {
   font-size: 1.9em;
   /* font-weight: 700; */
@@ -528,10 +528,10 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
   line-height: 1em;
   /* font-weight: 600;  */
 }
-.ms_txt_small_1 {
-  /* font-size: 0.9em; */
-  /* font-weight: 600;  */
-}
+/* .ms_txt_small_2 {
+  font-size: 0.9em;
+  font-weight: 600; 
+} */
 
 /****************************************************************
 **  MEDIA QUERIES
@@ -570,7 +570,7 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
   }
 }
 
-/*** BOOTSTRAP BREACKPOINTS ***/
+/*** BOOTSTRAP BREAKPOINTS ***/
 
 /* ________________________________________ XS >= 0 */
 /* default - SEE ABOVE */
@@ -623,12 +623,8 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
 .ms_padding_vert_medium { padding-top:  60px; padding-bottom:  60px; }
 .ms_padding_vert_small  { padding-top:  30px; padding-bottom:  30px; }
 .ms_padding_vert_min    { padding-top:  10px; padding-bottom:  10px; }
-.ms_float_l {
-  float: left;
-}
-.ms_float_r {
-  float: right;
-}
+.ms_float_l { float: left;  }
+.ms_float_r { float: right; }
 .ms_clearfix {
   content: "";
   display: table;
@@ -636,7 +632,7 @@ footer .seekbar:hover .seekbar_content .seekbar_progress:after {
 }
 
 /****************************************************************
-**  DEBUG
+**  BOOTSTRAP DEBUG
 */
 /* .debug [class*="container-"] {
   border: 1px solid green;
